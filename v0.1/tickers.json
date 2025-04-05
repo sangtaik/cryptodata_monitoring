@@ -1,0 +1,18 @@
+[
+    {
+        "exchange": "Bithumb",
+        "ticker": "BTC/KRW"
+    },
+    {
+        "exchange": "Coinone",
+        "ticker": "BTC/KRW"
+    },
+    {
+        "exchange": "Korbit",
+        "ticker": "BTC/KRW"
+    },
+    {
+        "exchange": "Upbit",
+        "ticker": "BTC/KRW"
+    }
+]

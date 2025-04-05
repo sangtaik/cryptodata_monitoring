@@ -1,0 +1,18 @@
+2025-04-04 22:51:05,091 [INFO] Korbit: Starting Korbit WebSocket collector
+2025-04-04 22:51:05,094 [INFO] Upbit: Starting Upbit WebSocket collector
+2025-04-04 22:51:05,106 [INFO] Bithumb: Starting Bithumb REST collector
+2025-04-04 22:51:05,107 [INFO] Coinone: Starting Coinone WebSocket collector
+2025-04-04 22:51:05,437 [INFO] Bithumb: Started new data file bithumb_orderbook_20250404_13.json
+2025-04-04 22:55:31,737 [INFO] Bithumb: REST request error: HTTPSConnectionPool(host='api.bithumb.com', port=443): Read timed out. (read timeout=1)
+2025-04-04 22:58:03,576 [INFO] Bithumb: REST request error: HTTPSConnectionPool(host='api.bithumb.com', port=443): Read timed out. (read timeout=1)
+2025-04-04 23:00:00,030 [INFO] Bithumb: Started new data file bithumb_orderbook_20250404_14.json
+2025-04-04 23:01:05,110 [INFO] Main: 10 minutes elapsed, stopping collectors.
+2025-04-04 23:01:14,101 [INFO] Korbit: Starting Korbit WebSocket collector
+2025-04-04 23:01:14,104 [INFO] Upbit: Starting Upbit WebSocket collector
+2025-04-04 23:01:14,105 [INFO] Bithumb: Starting Bithumb REST collector
+2025-04-04 23:01:14,108 [INFO] Coinone: Starting Coinone WebSocket collector
+2025-04-04 23:01:14,259 [INFO] Bithumb: Started new data file bithumb_orderbook_20250404_14.json
+2025-04-04 23:28:30,481 [INFO] Bithumb: REST request error: HTTPSConnectionPool(host='api.bithumb.com', port=443): Read timed out. (read timeout=1)
+2025-04-04 23:28:34,296 [INFO] Bithumb: REST request error: HTTPSConnectionPool(host='api.bithumb.com', port=443): Read timed out. (read timeout=1)
+2025-04-04 23:35:01,956 [INFO] Bithumb: REST request error: HTTPSConnectionPool(host='api.bithumb.com', port=443): Read timed out. (read timeout=1)
+2025-04-05 00:00:00,200 [INFO] Bithumb: Started new data file bithumb_orderbook_20250404_15.json

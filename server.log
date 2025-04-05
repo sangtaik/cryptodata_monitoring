@@ -1,0 +1,171 @@
+2025-04-04 23:40:34,134 [INFO] ✅ App started
+2025-04-04 23:40:34,134 [INFO] ✅ Starting status_updater thread
+2025-04-04 23:43:27,144 [INFO] 🔴 App shutting down...
+2025-04-04 23:43:51,707 [INFO] ✅ App started
+2025-04-04 23:43:51,707 [INFO] ✅ Starting status_updater thread
+2025-04-04 23:46:50,166 [INFO] 🔴 App shutting down...
+2025-04-04 23:50:24,835 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<Server.serve() done, defined at C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 32, in run
+    return loop.run_until_complete(future)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 64, in run_until_complete
+    self._run_once()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 100, in _run_once
+    handle._run()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 339, in __wakeup
+    self.__step()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 169, in step
+    step_orig(task, exc)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 256, in __step
+    result = coro.send(None)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\ProgramData\Anaconda3\lib\contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+2025-04-04 23:50:44,505 [INFO] ✅ App started
+2025-04-04 23:50:44,506 [INFO] ✅ Starting status_updater thread
+2025-04-04 23:53:17,969 [INFO] 🔴 App shutting down...
+2025-04-04 23:53:18,004 [INFO] ✅ App started
+2025-04-04 23:53:18,004 [INFO] ✅ Starting status_updater thread
+2025-04-04 23:53:21,603 [INFO] 🔴 App shutting down...
+2025-04-04 23:54:21,874 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 32, in run
+    return loop.run_until_complete(future)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 64, in run_until_complete
+    self._run_once()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 100, in _run_once
+    handle._run()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 339, in __wakeup
+    self.__step()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 169, in step
+    step_orig(task, exc)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 256, in __step
+    result = coro.send(None)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\ProgramData\Anaconda3\lib\contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+2025-04-04 23:54:21,875 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-29' coro=<Server.serve() done, defined at C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 32, in run
+    return loop.run_until_complete(future)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 64, in run_until_complete
+    self._run_once()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 100, in _run_once
+    handle._run()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 339, in __wakeup
+    self.__step()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 169, in step
+    step_orig(task, exc)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 256, in __step
+    result = coro.send(None)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\ProgramData\Anaconda3\lib\contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+2025-04-04 23:54:21,875 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<Server.serve() done, defined at C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 32, in run
+    return loop.run_until_complete(future)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 64, in run_until_complete
+    self._run_once()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 100, in _run_once
+    handle._run()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 339, in __wakeup
+    self.__step()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\nest_asyncio.py", line 169, in step
+    step_orig(task, exc)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\tasks.py", line 256, in __step
+    result = coro.send(None)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\ProgramData\Anaconda3\lib\contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+2025-04-05 00:01:06,022 [INFO] ✅ App started
+2025-04-05 00:01:06,023 [INFO] ✅ Starting status_updater thread
+2025-04-05 09:49:09,372 [INFO] ✅ App started
+2025-04-05 09:49:09,374 [INFO] ✅ Starting status_updater thread
+2025-04-05 09:50:09,744 [INFO] ✅ App started
+2025-04-05 09:50:09,744 [INFO] ✅ Starting status_updater thread
+2025-04-05 09:52:40,008 [INFO] ✅ App started
+2025-04-05 09:52:40,008 [INFO] ✅ Starting status_updater thread
+2025-04-05 09:54:14,945 [INFO] ✅ App started
+2025-04-05 09:54:14,945 [INFO] ✅ Starting status_updater thread
+2025-04-05 09:56:53,343 [INFO] ✅ App started
+2025-04-05 09:56:53,344 [INFO] ✅ Starting status_updater thread
+2025-04-05 09:59:37,974 [ERROR] ❗ Error occurred: '<' not supported between instances of 'dict' and 'dict'
+2025-04-05 10:34:50,052 [INFO] ✅ App started
+2025-04-05 10:34:50,052 [INFO] ✅ Starting status_updater thread
+2025-04-05 10:35:40,864 [ERROR] ❗ Error occurred: Expecting value: line 2 column 1 (char 2)
+2025-04-05 10:36:05,380 [ERROR] ❗ Error occurred: Expecting value: line 2 column 1 (char 2)
+2025-04-05 10:45:59,970 [INFO] ✅ App started
+2025-04-05 10:45:59,971 [INFO] ✅ Starting status_updater thread
+2025-04-05 11:00:58,344 [INFO] ✅ App started
+2025-04-05 11:00:58,345 [INFO] ✅ Starting status_updater thread
+2025-04-05 11:15:12,609 [INFO] ✅ App started
+2025-04-05 11:15:12,610 [INFO] ✅ Starting status_updater thread
+2025-04-05 12:24:08,558 [INFO] ✅ App started
+2025-04-05 12:24:08,560 [INFO] ✅ Starting status_updater thread
+2025-04-05 12:39:30,098 [INFO] ✅ App started
+2025-04-05 12:39:30,101 [INFO] ✅ Starting status_updater thread
+2025-04-05 12:42:14,306 [ERROR] ❗ Error occurred: 'default_tickers' is undefined
+2025-04-05 12:42:16,367 [ERROR] ❗ Error occurred: 'default_tickers' is undefined
+2025-04-05 12:45:45,255 [INFO] ✅ App started
+2025-04-05 12:45:45,256 [INFO] ✅ Starting status_updater thread
+2025-04-05 13:04:25,929 [INFO] ✅ App started
+2025-04-05 13:04:25,932 [INFO] ✅ Starting status_updater thread
+2025-04-05 13:06:02,636 [INFO] ✅ App started
+2025-04-05 13:06:02,637 [INFO] ✅ Starting status_updater thread
+2025-04-05 13:33:20,597 [INFO] ✅ App started
+2025-04-05 13:33:20,599 [INFO] ✅ Starting status_updater thread
+2025-04-05 13:53:19,293 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-05 13:53:20,514 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-05 13:53:59,224 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-05 13:54:13,291 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-05 13:57:17,034 [INFO] ✅ App started
+2025-04-05 13:57:17,036 [INFO] ✅ Starting status_updater thread
+2025-04-05 13:58:48,885 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-05 13:58:50,095 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-05 14:10:48,557 [INFO] ✅ App started
+2025-04-05 14:10:48,560 [INFO] ✅ Starting status_updater thread
