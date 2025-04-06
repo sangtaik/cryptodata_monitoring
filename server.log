@@ -169,3 +169,124 @@ KeyboardInterrupt
 2025-04-05 13:58:50,095 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
 2025-04-05 14:10:48,557 [INFO] ✅ App started
 2025-04-05 14:10:48,560 [INFO] ✅ Starting status_updater thread
+2025-04-06 20:33:09,937 [INFO] ✅ App started
+2025-04-06 20:33:09,939 [INFO] ✅ Starting status_updater thread
+2025-04-06 20:37:50,245 [INFO] ✅ App started
+2025-04-06 20:37:50,246 [INFO] ✅ Starting status_updater thread
+2025-04-06 20:39:33,436 [ERROR] ❗ Error occurred: name 'FileResponse' is not defined
+2025-04-06 20:39:44,638 [ERROR] ❗ Error occurred: name 'FileResponse' is not defined
+2025-04-06 20:42:17,770 [ERROR] ❗ Error occurred: name 'FileResponse' is not defined
+2025-04-06 20:45:01,939 [INFO] ✅ App started
+2025-04-06 20:45:01,940 [INFO] ✅ Starting status_updater thread
+2025-04-06 20:50:46,381 [INFO] ✅ App started
+2025-04-06 20:50:46,381 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:06:48,634 [INFO] ✅ App started
+2025-04-06 21:06:48,636 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:07:50,121 [INFO] ✅ App started
+2025-04-06 21:07:50,124 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:11:56,379 [INFO] ✅ App started
+2025-04-06 21:11:56,381 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:19:15,219 [INFO] ✅ App started
+2025-04-06 21:19:15,221 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:25:50,490 [ERROR] ❗ Error occurred: orderbook_view.html
+2025-04-06 21:26:07,450 [ERROR] ❗ Error occurred: orderbook_view.html
+2025-04-06 21:28:14,782 [ERROR] ❗ Error occurred: expected token 'end of statement block', got 'with'
+2025-04-06 21:28:15,938 [ERROR] ❗ Error occurred: expected token 'end of statement block', got 'with'
+2025-04-06 21:28:37,267 [INFO] ✅ App started
+2025-04-06 21:28:37,270 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:29:11,476 [ERROR] ❗ Error occurred: expected token 'end of statement block', got 'with'
+2025-04-06 21:30:33,921 [ERROR] ❗ Error occurred: base.html
+2025-04-06 21:30:34,795 [ERROR] ❗ Error occurred: base.html
+2025-04-06 21:46:59,886 [INFO] ✅ App started
+2025-04-06 21:46:59,887 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:57:48,001 [INFO] ✅ App started
+2025-04-06 21:57:48,003 [INFO] ✅ Starting status_updater thread
+2025-04-06 21:58:24,813 [ERROR] ❗ Error occurred: 'tickers_data' is undefined
+2025-04-06 22:06:29,858 [INFO] ✅ App started
+2025-04-06 22:06:29,859 [INFO] ✅ Starting status_updater thread
+2025-04-06 22:18:51,754 [ERROR] ❗ Error occurred: 'tickers_data' is undefined
+2025-04-06 22:20:16,050 [INFO] ✅ App started
+2025-04-06 22:20:16,052 [INFO] ✅ Starting status_updater thread
+2025-04-06 22:20:34,053 [ERROR] ❗ Error occurred: name 'sorted_tickers' is not defined
+2025-04-06 22:22:39,854 [INFO] ✅ App started
+2025-04-06 22:22:39,855 [INFO] ✅ Starting status_updater thread
+2025-04-06 22:23:55,684 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-06 22:23:56,990 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-06 22:30:12,095 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-06 22:30:15,840 [ERROR] ❗ Error occurred: name 'selected_tickers' is not defined
+2025-04-06 22:30:49,058 [INFO] ✅ App started
+2025-04-06 22:30:49,060 [INFO] ✅ Starting status_updater thread
+2025-04-06 22:31:13,413 [ERROR] ❗ Error occurred: 'tickers_data' is undefined
+2025-04-06 22:32:16,275 [ERROR] ❗ Error occurred: base.html
+2025-04-06 22:43:10,797 [INFO] ✅ App started
+2025-04-06 22:43:10,798 [INFO] ✅ Starting status_updater thread
+2025-04-06 22:50:01,615 [INFO] ✅ App started
+2025-04-06 22:50:01,616 [INFO] ✅ Starting status_updater thread
+2025-04-07 01:02:14,845 [INFO] ✅ App started
+2025-04-07 01:02:14,846 [INFO] ✅ Starting status_updater thread
+2025-04-07 01:02:34,995 [ERROR] ❗ Error occurred: name 'HTMLResponse' is not defined
+2025-04-07 01:06:10,160 [ERROR] ❗ Error occurred: name 'tickers_by_exchange' is not defined
+2025-04-07 01:06:10,297 [ERROR] ❗ Error occurred: name 'FileResponse' is not defined
+2025-04-07 01:08:39,470 [INFO] ✅ App started
+2025-04-07 01:08:39,471 [INFO] ✅ Starting status_updater thread
+2025-04-07 01:10:54,446 [ERROR] ❗ Error occurred: name 'tickers_by_exchange' is not defined
+2025-04-07 01:10:54,483 [ERROR] ❗ Error occurred: name 'FileResponse' is not defined
+2025-04-07 01:10:55,181 [ERROR] ❗ Error occurred: name 'tickers_by_exchange' is not defined
+2025-04-07 01:10:55,482 [ERROR] ❗ Error occurred: name 'FileResponse' is not defined
+2025-04-07 01:11:50,299 [INFO] ✅ App started
+2025-04-07 01:11:50,300 [INFO] ✅ Starting status_updater thread
+2025-04-07 01:12:08,295 [ERROR] ❗ Error occurred: name 'tickers_by_exchange' is not defined
+2025-04-07 01:18:31,278 [INFO] ✅ App started
+2025-04-07 01:18:31,280 [INFO] ✅ Starting status_updater thread
+2025-04-07 01:18:40,754 [ERROR] ❗ Error occurred: no filter named 'enumerate'
+2025-04-07 01:21:18,464 [ERROR] ❗ Error occurred: no filter named 'enumerate'
+2025-04-07 01:26:25,595 [INFO] ✅ App started
+2025-04-07 01:26:25,596 [INFO] ✅ Starting status_updater thread
+2025-04-07 01:41:54,245 [INFO] ✅ App started
+2025-04-07 01:41:54,246 [INFO] ✅ Starting status_updater thread
+2025-04-07 01:42:46,665 [ERROR] ❗ Error occurred: Expecting value: line 2 column 1 (char 2)
+2025-04-07 01:44:16,407 [ERROR] ❗ Error occurred: Expecting value: line 2 column 1 (char 2)
+2025-04-07 02:11:33,774 [INFO] ✅ App started
+2025-04-07 02:11:33,775 [INFO] ✅ Starting status_updater thread
+2025-04-07 02:12:39,056 [ERROR] ❗ Error occurred: 'NoneType' object has no attribute 'lower'
+2025-04-07 02:13:10,149 [ERROR] ❗ Error occurred: 'NoneType' object has no attribute 'lower'
+2025-04-07 02:15:29,575 [INFO] ✅ App started
+2025-04-07 02:15:29,576 [INFO] ✅ Starting status_updater thread
+2025-04-07 02:16:43,117 [ERROR] ❗ Error occurred: Expecting value: line 2 column 1 (char 2)
+2025-04-07 02:31:36,898 [INFO] ✅ App started
+2025-04-07 02:31:36,898 [INFO] ✅ Starting status_updater thread
+2025-04-07 02:50:37,539 [INFO] ✅ App started
+2025-04-07 02:50:37,540 [INFO] ✅ Starting status_updater thread
+2025-04-07 03:06:31,746 [INFO] ✅ App started
+2025-04-07 03:06:31,747 [INFO] ✅ Starting status_updater thread
+2025-04-07 03:09:23,054 [ERROR] ❗ Error occurred: unsupported operand type(s) for /: 'str' and 'float'
+2025-04-07 03:16:42,076 [INFO] ✅ App started
+2025-04-07 03:16:42,078 [INFO] ✅ Starting status_updater thread
+2025-04-07 03:21:41,945 [ERROR] ❗ Error occurred: 'enumerate' is undefined
+2025-04-07 03:27:57,502 [ERROR] ❗ Error occurred: 'enumerate' is undefined
+2025-04-07 03:35:27,977 [ERROR] ❗ Error occurred: Encountered unknown tag 'endif'.
+2025-04-07 03:35:32,870 [ERROR] ❗ Error occurred: Encountered unknown tag 'endif'.
+2025-04-07 03:57:45,899 [INFO] ✅ App started
+2025-04-07 03:57:45,900 [INFO] ✅ Starting status_updater thread
+2025-04-07 04:12:31,282 [INFO] ✅ App started
+2025-04-07 04:12:31,283 [INFO] ✅ Starting status_updater thread
+2025-04-07 04:27:06,452 [INFO] ✅ App started
+2025-04-07 04:27:06,453 [INFO] ✅ Starting status_updater thread
+2025-04-07 04:28:23,661 [ERROR] ❗ Error occurred: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2025-04-07 04:56:58,442 [INFO] ✅ App started
+2025-04-07 04:56:58,443 [INFO] ✅ Starting status_updater thread
+2025-04-07 05:03:06,161 [INFO] ✅ App started
+2025-04-07 05:03:06,162 [INFO] ✅ Starting status_updater thread
+2025-04-07 05:13:16,096 [INFO] ✅ App started
+2025-04-07 05:13:16,098 [INFO] ✅ Starting status_updater thread
+2025-04-07 05:13:23,943 [ERROR] ❗ Error occurred: name 'tickers' is not defined
+2025-04-07 05:15:22,572 [INFO] ✅ App started
+2025-04-07 05:15:22,574 [INFO] ✅ Starting status_updater thread
+2025-04-07 05:21:39,152 [INFO] ✅ App started
+2025-04-07 05:21:39,153 [INFO] ✅ Starting status_updater thread
+2025-04-07 05:21:55,084 [ERROR] ❗ Error occurred: name 'entry' is not defined
+2025-04-07 05:23:02,029 [INFO] ✅ App started
+2025-04-07 05:23:02,029 [INFO] ✅ Starting status_updater thread
+2025-04-07 05:23:15,517 [ERROR] ❗ Error occurred: name 'tickers' is not defined
+2025-04-07 05:24:08,971 [INFO] ✅ App started
+2025-04-07 05:24:08,973 [INFO] ✅ Starting status_updater thread
