@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>📈 실시간 호가창 ({{ ticker }})</h2>
+<p> {{ filename }}</p>
+<p>⏰ {{ time_str }}</p>
+
+<div class="orderbook-grid">
+  <table class="orderbook-side">
+    <thead><tr><th colspan="2" class="sell-header">🟥 매도</th></tr></thead>
+    <tbody>
+      {% for ask in asks|reverse %}
+      <tr>
+        <td class="sell-price">{{ "{:,.0f}".format(ask[0]) }}</td>
+        <td>{{ "%.8f"|format(ask[1]) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="current-price">
+    <strong>{{ "{:,.0f}".format(asks[0][0]) }} KRW</strong>
+  </div>
+
+  <table class="orderbook-side">
+    <thead><tr><th colspan="2" class="buy-header">🟦 매수</th></tr></thead>
+    <tbody>
+      {% for bid in bids %}
+      <tr>
+        <td class="buy-price">{{ "{:,.0f}".format(bid[0]) }}</td>
+        <td>{{ "%.8f"|format(bid[1]) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<style>
+.orderbook-grid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.orderbook-side {
+  width: 180px;
+  font-size: 14px;
+  text-align: right;
+  border-collapse: collapse;
+}
+.orderbook-side td {
+  padding: 4px;
+}
+.sell-price { color: #e53935; }
+.buy-price { color: #1e88e5; }
+.current-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+</style>
+{% endblock %}

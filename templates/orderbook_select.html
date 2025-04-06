@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Orderbook Snapshot Viewer</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    /* If needed, minimal inline styles or overrides can go here */
+  </style>
+</head>
+<body>
+  <h1>📈 호가 데이터 조회</h1>
+
+    <!-- Selection Form -->
+    <form method="get" action="/orderbook" id="snapshotForm">
+
+        <!-- 거래소 선택 -->
+        <label for="exchange">거래소:</label>
+        <select name="exchange" id="exchange" required onchange="this.form.submit()">
+        <option value="" disabled {{ not selected.exchange and 'selected' }}>Select Exchange</option>
+        {% for ex, symbols in tickers.items() %}
+          <option value="{{ ex }}" {% if selected.exchange == ex %}selected{% endif %}>{{ ex }}</option>
+        {% endfor %}
+        </select>
+
+        <!-- 티커 선택 -->
+        <label for="ticker">티커:</label>
+        <select name="ticker" id="ticker" required>
+        {% if selected.exchange %}
+          {% for sym in tickers[selected.exchange] %}
+            <option value="{{ sym }}" {% if selected.ticker == sym %}selected{% endif %}>{{ sym }}</option>
+          {% endfor %}
+        {% else %}
+          <option value="" disabled selected>-- 거래소를 먼저 선택 --</option>
+        {% endif %}
+        </select>
+
+        <!-- 날짜 입력 -->
+        <label for="date">날짜:</label>
+        <input type="text" name="date" id="date" value="{{ selected.date or date }}" required>
+
+        <!-- 시간 선택 -->
+        <label for="hour">시간:</label>
+        <select name="hour" id="hour" required onchange="this.form.submit()">
+          {% for hour_str in available_hours %}
+            <option value="{{ hour_str }}" {% if selected.hour == hour_str %}selected{% endif %}>
+              {{ hour_str }}시
+            </option>
+          {% endfor %}
+        </select>
+        
+        <!-- 스냅샷 선택 -->
+        {% if snapshots %}
+          <label for="snapshot">스냅샷 시점:</label>
+          <select name="snapshot_index" required>
+            {% for snap in snapshots %}
+                <option value="{{ loop.index0 }}" 
+                        {% if loop.index0 == selected.snapshot_index %}selected{% endif %}>
+                    {{ snap.time }}
+                </option>
+            {% endfor %}
+          </select>
+        
+        <script>
+            document.getElementById('snapshot').addEventListener('change', function () {
+                document.getElementById('snapshotForm').submit();
+            });
+        </script>
+        
+        {% else %}
+          <span style="color: red;">📛 선택 가능한 스냅샷이 없습니다.</span>
+        {% endif %}
+        <button type="submit">불러오기</button>
+
+    </form>
+
+
+  {% if snapshots and selected_snapshot %}
+  <!-- Snapshot Selection and Orderbook Display -->
+  <hr>
+  
+    {% if selected_snapshot %}
+        <h3>{{ selected.exchange }} {{ selected.ticker }} - {{ selected_snapshot.time }}</h3>
+    {% else %}
+        <h3>{{ exchange }} {{ ticker }} - {{ date }} {{ hour }}시</h3>
+    {% endif %}
+  
+  <!-- Orderbook table for the selected snapshot -->
+  <div class="timestamp">시점: {{ selected_snapshot.time }}</div>
+  <table class="orderbook-table">
+    <thead>
+      <tr>
+        <th class="buy-header">Bid Price</th>
+        <th class="buy-header">Bid Qty</th>
+        <th class="sell-header">Ask Price</th>
+        <th class="sell-header">Ask Qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in selected_snapshot.rows %}
+        <tr>
+          <td class="buy-price">
+            {% if row.bid_price %}
+              {{ "{:,.0f}".format(row.bid_price|float) }}
+            {% else %} - {% endif %}
+          </td>
+          <td>
+            {% if row.bid_qty %}
+              {{ "{:.8f}".format(row.bid_qty|float) }}
+            {% else %} - {% endif %}
+          </td>            
+          <td class="sell-price">
+            {% if row.ask_price %}
+              {{ "{:,.0f}".format(row.ask_price|float) }}
+            {% else %} - {% endif %}
+          </td>
+          <td>
+            {% if row.ask_qty %}
+              {{ "{:.8f}".format(row.ask_qty|float) }}
+            {% else %} - {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+  
+  {% if error %}
+  <p style="color:red;">⚠ {{ error }}</p>
+  {% endif %}
+</body>
+</html>

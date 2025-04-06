@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Orderbook List Viewer</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    /* If needed, minimal inline styles or overrides can go here */
+  </style>
+</head>
+<body>
+
+{% extends "base.html" %}
+{% block content %}
+<h2>📈 호가 리스트 ({{ ticker }})</h2>
+<div class="orderbook">
+  {% if result_data %}
+    {% for ticker, snapshots in result_data.items() %}
+      <h4>{{ ticker }}</h4>
+      {% for snap in snapshots %}
+        <h5>{{ snap.time }}</h5>
+        <table>
+          <thead>
+            <tr><th>Bid Price</th><th>Bid Qty</th><th>Ask Price</th><th>Ask Qty</th></tr>
+          </thead>
+          <tbody>
+            {% for row in snap.rows %}
+              <tr>
+                <td>{{ "{:,.0f}".format(row.bid_price) if row.bid_price else "" }}</td>
+                <td class="{{ 'zero' if row.bid_qty == 0 else '' }}">
+                  {{ "0" if row.bid_qty == 0 else "{:.8f}".format(row.bid_qty) }}
+                </td>
+                <td>{{ "{:,.0f}".format(row.ask_price) if row.ask_price else "" }}</td>
+                <td class="{{ 'zero' if row.ask_qty == 0 else '' }}">
+                  {{ "0" if row.ask_qty == 0 else "{:.8f}".format(row.ask_qty) }}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endfor %}
+    {% endfor %}
+  {% else %}
+    <p>📭 데이터가 없습니다.</p>
+  {% endif %}
+</div>
+    
+{% endblock %}    
+</body>
+</html>

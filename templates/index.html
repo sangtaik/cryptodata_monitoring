@@ -1,31 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <link rel="stylesheet" href="/static/css/style.css">
   <meta charset="UTF-8">
   <title>Orderbook Dashboard</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
     .main-container {
       display: flex;
       flex-direction: row;
       gap: 20px;
       align-items: flex-start;
     }
-    .sidebar, .orderbook, .order-form, .info-panel {
+
+    .sidebar,
+    .orderbook,
+    .order-form,
+    .info-panel {
       padding: 10px;
       border: 1px solid #ccc;
       background: #fff;
     }
-    .sidebar { width: 200px; background: #f4f4f4; }
-    .orderbook { width: 300px; background: #f7f9fc; }
-    .order-form { width: 300px; background: #fff; }
-    .info-panel { flex: 1; background: #fafafa; max-width: 500px; overflow-y: auto; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: right; }
-    th { background: #eee; }
-    form { margin-bottom: 1em; }
+
+    .sidebar {
+      width: 300px;
+      background: #f4f4f4;
+    }
+
+    .orderbook {
+      width: 400px;
+      background: #f7f9fc;
+    }
+
+    .order-form {
+      width: 400px;
+      background: #fff;
+    }
+
+    .info-panel {
+      flex: 1;
+      background: #fafafa;
+      max-width: 500px;
+      overflow-y: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      text-align: right;
+    }
+
+    th {
+      background: #eee;
+    }
+
+    form {
+      margin-bottom: 1em;
+    }
   </style>
 </head>
+
 <body>
   <h1>📊 Orderbook 관리 대시보드</h1>
 
@@ -34,22 +80,22 @@
     <div class="sidebar">
       <h2>🎯 Tracked Tickers</h2>
       {% for exchange, tickers in tickers_data.items() %}
-        <h3>{{ exchange }}</h3>
-        <ul>
-          {% for ticker in tickers %}
-            <li>
-              {{ ticker }}
-              {% set is_default = default_tickers.get(exchange) and ticker in default_tickers[exchange] %}
-              {% if not is_default %}
-              <form method="post" action="/delete_ticker" style="display:inline;">
-                <input type="hidden" name="exchange" value="{{ exchange }}">
-                <input type="hidden" name="ticker" value="{{ ticker }}">
-                <button type="submit">삭제</button>
-              </form>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
+      <h3>{{ exchange }}</h3>
+      <ul>
+        {% for ticker in tickers %}
+        <li>
+          {{ ticker }}
+          {% set is_default = default_tickers.get(exchange) and ticker in default_tickers[exchange] %}
+          {% if not is_default %}
+          <form method="post" action="/delete_ticker" style="display:inline;">
+            <input type="hidden" name="exchange" value="{{ exchange }}">
+            <input type="hidden" name="ticker" value="{{ ticker }}">
+            <button type="submit">삭제</button>
+          </form>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
       {% endfor %}
 
       <h3>➕ Add New Ticker</h3>
@@ -66,42 +112,52 @@
       </form>
     </div>
 
-    <!-- Orderbook -->
-    <div class="orderbook">
-      <h2>📈 Orderbook 보기</h2>
-      <form id="selectForm" method="post" action="/select">
-        {% for exchange, tickers in tickers_data.items() %}
-          <h3>{{ exchange }}</h3>
-          {% for ticker in tickers %}
-            <input type="checkbox" name="tickers" value="{{ exchange }}:{{ ticker }}" 
-              {% if selected_tickers and (exchange ~ ':' ~ ticker) in selected_tickers %}checked{% endif %}> {{ ticker }}<br>
-          {% endfor %}
-        {% endfor %}
-        <button type="submit">View Selected</button>
-      </form>
-
-      {% if result_data %}
-        {% for ticker, snapshots in result_data.items() %}
-          <h4>{{ ticker }}</h4>
-          {% for snap in snapshots %}
-            <p><strong>{{ snap.time }}</strong></p>
-            <table>
-              <thead><tr><th>Bid Price</th><th>Bid Qty</th><th>Ask Price</th><th>Ask Qty</th></tr></thead>
-              <tbody>
-                {% for i in range(snap.bids|length) %}
-                  <tr>
-                    <td>{{ snap.bids[i][0] }}</td>
-                    <td>{{ snap.bids[i][1] }}</td>
-                    <td>{{ snap.asks[i][0] }}</td>
-                    <td>{{ snap.asks[i][1] }}</td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          {% endfor %}
-        {% endfor %}
-      {% endif %}
+    <div class="info-panel">
+    <h2>📈 호가 보기</h2>
+    <ul class="ticker-list">
+      {% for exchange, tickers in tickers_data.items() %}
+      {% for ticker in tickers %}
+      <li>
+        <label>
+          <input type="checkbox" name="tickers" value="{{ exchange }}:{{ ticker }}" 
+          {% if exchange in default_tickers and ticker in default_tickers[exchange] %} disabled checked {% endif %}>
+          {{ exchange }}:{{ ticker }}
+        </label>
+  
+        <!-- 🔍 호가 보기 버튼 추가 -->
+        <a href="/orderbook?ticker={{ exchange }}:{{ ticker }}" target="_blank">
+          <button type="button">호가 보기</button>
+        </a>
+      </li>
+      {% endfor %}
+      {% endfor %}
+    </ul>
     </div>
+
+    <div class="info-panel">
+      <h2>📈 Orderbook 리스트 보기</h2>
+      <ul class="ticker-list">
+        {% for exchange, tickers in tickers_data.items() %}
+        {% for ticker in tickers %}
+        <li>
+          <label>
+            <input type="checkbox" name="tickers" value="{{ exchange }}:{{ ticker }}" 
+            {% if exchange in default_tickers and ticker in default_tickers[exchange] %} disabled checked {% endif %}>
+            {{ exchange }}:{{ ticker }}
+          </label>
+    
+          <!-- 🔍 호가 보기 버튼 추가 -->
+          <a href="/orderbook_list?ticker={{ exchange }}:{{ ticker }}" target="_blank">
+            <button type="button">호가 리스트 보기</button>
+          </a>
+        </li>
+        {% endfor %}
+        {% endfor %}
+      </ul>
+      </div>
+    
+
+
 
     <!-- Info Panel: 로그 검색 -->
     <div class="info-panel">
@@ -113,24 +169,29 @@
         <label for="log_level">Log Level:</label>
         <select name="log_exchange" id="log_level">
           <option value="">전체</option>
-          <option value="INFO" {% if log_exchange == "INFO" %}selected{% endif %}>INFO</option>
-          <option value="WARNING" {% if log_exchange == "WARNING" %}selected{% endif %}>WARNING</option>
-          <option value="ERROR" {% if log_exchange == "ERROR" %}selected{% endif %}>ERROR</option>
-          <option value="DEBUG" {% if log_exchange == "DEBUG" %}selected{% endif %}>DEBUG</option>
-          <option value="CRITICAL" {% if log_exchange == "CRITICAL" %}selected{% endif %}>CRITICAL</option>
+          <option value="INFO" {% if log_exchange=="INFO" %}selected{% endif %}>INFO</option>
+          <option value="WARNING" {% if log_exchange=="WARNING" %}selected{% endif %}>WARNING</option>
+          <option value="ERROR" {% if log_exchange=="ERROR" %}selected{% endif %}>ERROR</option>
+          <option value="DEBUG" {% if log_exchange=="DEBUG" %}selected{% endif %}>DEBUG</option>
+          <option value="CRITICAL" {% if log_exchange=="CRITICAL" %}selected{% endif %}>CRITICAL</option>
         </select>
 
         <button type="submit">검색</button>
       </form>
 
       {% if log_results %}
-        <h3>📄 로그 결과</h3>
-        <pre style="background:#f9f9f9; padding:10px; border:1px solid #ccc; max-height:300px; overflow-y:auto;">
-{% for line in log_results %}{{ line }}
-{% endfor %}
+      <h3>📄 로그 결과</h3>
+      <pre style="background:#f9f9f9; padding:10px; border:1px solid #ccc; max-height:300px; overflow-y:auto;">
+      {% for line in log_results %}{{ line }}
+      {% endfor %}
         </pre>
       {% endif %}
     </div>
   </div>
+
+
+
+
 </body>
+
 </html>

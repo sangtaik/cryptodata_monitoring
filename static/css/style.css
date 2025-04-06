@@ -1,0 +1,39 @@
+/* Orderbook table styling */
+.orderbook-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.orderbook-table th, .orderbook-table td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: right;
+}
+.orderbook-table th {
+  background: #f8f8f8;
+  font-weight: 600;
+}
+/* Highlight bid vs ask prices */
+.buy-header { background-color: #e3f2fd; }   /* light blue background */
+.sell-header { background-color: #ffebee; }  /* light red/pink background */
+.buy-price { color: #1e88e5; font-weight: bold; }   /* blue text for bid prices */
+.sell-price { color: #e53935; font-weight: bold; }  /* red text for ask prices */
+.current-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+/* Timestamp text */
+.timestamp {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #555;
+  text-align: right;
+}
+
+td.zero {
+  color: red;
+  font-weight: bold;
+  background-color: #ffe5e5;
+}
